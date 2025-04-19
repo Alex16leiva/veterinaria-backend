@@ -1,18 +1,22 @@
 ﻿using Dominio.Core;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Dominio.Context.Entidades.Seguridad
 {
     public class Usuario : Entity
     {
-        public string UsuarioId { get; set; }
-        public string Contrasena { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string RolId { get; set; }
+        [Key]
+        public required string UsuarioId { get; set; }
+        public required string Contrasena { get; set; }
+        public required string Nombre { get; set; }
+        public required string Apellido { get; set; }
+        public required bool Activo { get; set; }
+        public string? RolId { get; set; }
 
         [NotMapped]
-        public string Token { get; set; }
-        //public virtual Rol Rol { get; set; }
+        public string? Token { get; set; }
+        [ForeignKey("RolId")]
+        public virtual Rol? Rol { get; set; }
     }
 }

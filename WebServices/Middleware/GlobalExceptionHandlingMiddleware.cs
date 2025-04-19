@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using System.Text.Json;
 
+
 namespace WebServices.Middleware
 {
     public class GlobalExceptionHandlingMiddleware : IMiddleware

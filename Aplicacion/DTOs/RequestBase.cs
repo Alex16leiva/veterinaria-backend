@@ -3,6 +3,6 @@
     public class RequestBase
     {
         public RequestUserInfo RequestUserInfo { get; set; }
-        public QueryInfo QueryInfo { get; set; }
+        public QueryInfo? QueryInfo { get; set; }
     }
 }

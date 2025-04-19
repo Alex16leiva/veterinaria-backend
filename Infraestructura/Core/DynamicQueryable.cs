@@ -233,8 +233,7 @@ namespace System.Linq.Dynamic
             for (int i = 0; i < properties.Length; i++)
             {
                 if (properties[i].Name != other.properties[i].Name ||
-                    properties[i].Type != other.properties[i].Type)
-                    return false;
+                    properties[i].Type != other.properties[i].Type) return false;
             }
             return true;
         }
@@ -256,8 +255,8 @@ namespace System.Linq.Dynamic
         private ClassFactory()
         {
             AssemblyName name = new AssemblyName("DynamicClasses");
-            
             AssemblyBuilder assembly = AssemblyBuilder.DefineDynamicAssembly(name, AssemblyBuilderAccess.Run);
+
 #if ENABLE_LINQ_PARTIAL_TRUST
             new ReflectionPermission(PermissionState.Unrestricted).Assert();
 #endif

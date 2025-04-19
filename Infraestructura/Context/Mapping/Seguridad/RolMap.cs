@@ -10,8 +10,8 @@ namespace Infraestructura.Context.Mapping.Seguridad
         {
             builder.HasKey(r => r.RolId);
             builder.ToTable("Rol", "Seguridad");
-            builder.Property(r => r.RolId).HasColumnName("RolId").IsRequired().IsUnicode(false).HasMaxLength(25);
-            builder.Property(r => r.Descripcion).HasColumnName("Descripcion").IsRequired().IsUnicode(false).HasMaxLength(25);
+            builder.Property(r => r.RolId).HasColumnName("RolId").IsRequired().IsUnicode(false).HasMaxLength(50);
+            builder.Property(r => r.Descripcion).HasColumnName("Descripcion").IsRequired().IsUnicode(false).HasMaxLength(50);
 
 
             base.Configure(builder);
